@@ -13,8 +13,8 @@ Installation and Setup
 
 1. Clone the Repository
    
-git clone https://github.com/DeathGun221/Auto-test-by-selenium.git
-cd Auto-test-by-selenium
+git clone https://github.com/OleksandrSava/Selenium_E2E_Test.git
+cd Selenium_E2E_Test
 
 2. Install Python Dependencies
 
@@ -28,4 +28,5 @@ pytest
 -Running Tests Using Docker:
 
 docker-compose up --build
+
 
