@@ -1,8 +1,6 @@
-Hi!
+Welcome to the Auto-Test project, built using the Selenium testing framework.
 
-Welcome to the Auto-Test project, built using the powerful Selenium testing framework.
-
-This repository includes everything you need for robust automated UI testing, featuring:
+This repository includes full E2E test for opensource-demo.orangehrmlive.com, featuring:
 
 Allure Reports for detailed and visually appealing test result summaries.
 
@@ -30,3 +28,4 @@ pytest
 -Running Tests Using Docker:
 
 docker-compose up --build
+
