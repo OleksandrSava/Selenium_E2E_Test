@@ -1,32 +1,37 @@
-Welcome to the Auto-Test project, built using the Selenium testing framework.
+# Selenium E2E Test
 
-This repository includes full E2E test for opensource-demo.orangehrmlive.com, featuring:
+Compact Selenium (Python) end-to-end test suite for opensource-demo.orangehrmlive.com with Allure reporting and Docker support.
 
-Allure Reports for detailed and visually appealing test result summaries.
+Quick start
+1. git clone https://github.com/OleksandrSava/Selenium_E2E_Test.git
+2. cd Selenium_E2E_Test
+3. python -m venv .venv && source .venv/bin/activate
+4. pip install -r requirements.txt
+5. pytest -q
 
-A Dockerfile and docker-compose.yml to easily set up and run tests in isolated, consistent environments.
+Run with Docker
+- docker-compose up --build
+- or start a standalone Selenium container:
+  docker run -d -p 4444:4444 --shm-size=2g selenium/standalone-chrome:latest
 
-Fully configured CI/CD pipelines that automatically execute tests to ensure continuous quality and reliability.
+Useful env vars
+- BASE_URL — application URL (default: https://opensource-demo.orangehrmlive.com)
+- BROWSER — chrome|firefox (default: chrome)
+- HEADLESS — true|false
+- REMOTE_URL — remote WebDriver (optional)
 
+Common commands
+- Run all tests: pytest
+- Run a folder/file: pytest tests/
+- Run single test: pytest tests/test_example.py::test_login
+- Parallel: pytest -n auto
+- Allure report: pytest --alluredir=reports/allure
 
-Installation and Setup
+Project layout
+- tests/ — test cases
+- pages/ — Page Objects
+- fixtures/, utils/, reports/, requirements.txt, conftest.py, docker-compose.yml
 
-1. Clone the Repository
-   
-git clone https://github.com/OleksandrSava/Selenium_E2E_Test.git
-cd Selenium_E2E_Test
-
-2. Install Python Dependencies
-
-pip install -r requirements.txt
-
-4. Running Tests Locally
--Simply run:
-
-pytest
-
--Running Tests Using Docker:
-
-docker-compose up --build
-
-
+Notes
+- Designed to run locally, in Docker, or in CI. Allure and JUnit artifacts are supported.
+- Add LICENSE and CONTRIBUTING.md to make the repo job-ready (suggest MIT).
