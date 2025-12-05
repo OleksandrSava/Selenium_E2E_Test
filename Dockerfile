@@ -27,6 +27,8 @@ RUN apk add --no-cache openjdk11-jre-headless curl tar ca-certificates \
     && rm -f /tmp/allure.tgz \
     && allure --version
 
+WORKDIR /usr/workspace
+
 COPY requirements.txt /usr/workspace/requirements.txt
 
 RUN pip install --upgrade pip \
