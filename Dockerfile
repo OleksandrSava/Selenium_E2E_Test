@@ -1,5 +1,10 @@
 FROM python:3.12-alpine
 
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    ALLURE_VERSION=2.27.0
+
 RUN apk update && apk add --no-cache \
     chromium \
     chromium-chromedriver \
