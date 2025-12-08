@@ -11,4 +11,4 @@ services:
       - LOGIN=${LOGIN}
       - PASSWORD=${PASSWORD}
 
-    command: "/bin/sh -c 'pytest -sv --alluredir=allure-results'"
+    command: ["pytest", "-sv", "--alluredir=allure-results"]
